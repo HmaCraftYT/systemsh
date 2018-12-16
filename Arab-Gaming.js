@@ -526,4 +526,4 @@ client.on('message', message =>{
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","member"));
     });
-client.login("NTIyNDQxMjE2MjY1MDI3NTk0.DvLfHQ.YxurgF7XMvxGw53AvhKeiWjHNjc");
+client.login();
