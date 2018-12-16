@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "+";
+var prefix = "sh";
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`HerosSystem- Script By : HemaCraft`);
@@ -385,7 +385,7 @@ client.on('message', message => {
  [shhelp ! لمعرفة اوامر البوت ]
  [shinvites ! لمعرفة عدد الاشخاص الذين دعوتهم للسيرفر ]
  [shinvite ! للحصول على رابط لاضافة البوت ]
-
+ [shreport ! للتبليغ عن شخص]
 
 {[اوامر الادارة]}
  
@@ -499,7 +499,7 @@ client.on('message', message =>{
     let args = messageArray.slice(1);
     let prefix = 'sh';
      
-    if(cmd === `${prefix}ابلاغ`){
+    if(cmd === `${prefix}report`){
         let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!rUser) return message.channel.send("ما اعرف ابلغ عن مين؟؟");
         let reason = args.join(" ").slice(22);
