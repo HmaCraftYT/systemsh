@@ -8,7 +8,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : HemaCraft ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`+help`,"http://twitch.tv/S-F")
+client.user.setGame(`shhelp`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 client.on('guildMemberAdd', member => { //LAST CODES -HONRAR-
@@ -60,7 +60,7 @@ client.on('guildMemberAdd', member => {
     .setColor('GREEN')
     .setFooter('==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====', 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
 
-var channel =member.guild.channels.find('name', '♚الترحيب♚')
+var channel =member.guild.channels.find('name', ':triangular_flag_on_post:welcome:triangular_flag_on_post:')
 if (!channel) return;
 channel.send({embed : embed});
 });
@@ -80,7 +80,7 @@ if (!channel) return;
 channel.send({embed : embed});
 })
 client.on('message', emoko => {
-  if (emoko.content === "+date") {
+  if (emoko.content === "shdate") {
          if (!emoko.channel.guild) return emoko.reply('** This command only for servers **');  
          var currentTime = new Date(),
             hours = currentTime.getHours() + 2 ,
@@ -175,7 +175,7 @@ client.on('message', message => {
     }
 });
     client.on("message", message => {
-      var prefix = "+";
+      var prefix = "sh";
     
               var args = message.content.substring(prefix.length).split(" ");
               if (message.content.startsWith(prefix + "clear")) {
@@ -197,7 +197,7 @@ client.on('message', message => {
     
     });
 client.on('message' , message => {
-    var prefix = "+";
+    var prefix = "sh";
     let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
     if(message.content.startsWith(prefix + 'unban')) {
         if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
@@ -215,7 +215,7 @@ client.on('message' , message => {
     }
 });
 client.on('message', message => {
-    const prefix = "+";
+    const prefix = "sh";
       if (message.author.kick) return;
       if (!message.content.startsWith(prefix + 'kick')) return;
      
@@ -253,7 +253,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-var prefix = "+"
+var prefix = "sh"
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -294,7 +294,7 @@ client.on('message', message => {
 });
 client.on('message', message => {   
 if (message.author.boss) return;
-var prefix = "+";
+var prefix = "sh";
 if (!message.content.startsWith(prefix)) return;
 let command = message.content.split(" ")[0];
 command = command.slice(prefix.length);
@@ -360,7 +360,7 @@ var unmuteembeddm = new Discord.RichEmbed()
 }
 });
 client.on('message', message => {
-    if (message.content.startsWith("-invites")) {
+    if (message.content.startsWith("shinvites")) {
     message.guild.fetchInvites()
     .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر`))
 
@@ -371,7 +371,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
      if (message.author.bot) return;
-       if (message.content ===  "+help") {
+       if (message.content ===  "shhelp") {
            message.channel.send('**`شوف الخاص حقك`**')
            
  
@@ -382,25 +382,25 @@ client.on('message', message => {
  
  {[اوامر الاعضاء !!]}
 
- [+help ! لمعرفة اوامر البوت ]
- [+invites ! لمعرفة عدد الاشخاص الذين دعوتهم للسيرفر ]
- [+invite ! للحصول على رابط لاضافة البوت ]
+ [shhelp ! لمعرفة اوامر البوت ]
+ [shinvites ! لمعرفة عدد الاشخاص الذين دعوتهم للسيرفر ]
+ [shinvite ! للحصول على رابط لاضافة البوت ]
 
 
 {[اوامر الادارة]}
  
- [+bc !! لارسال رسالة للجميع فى وقت واحد]
- [+ban !! لتبنيد المخربين]
- [+unban !! لفك الباند]
- [+kick !! لاخراج الخارجين عن القوانين]
- [+Mute !! لاعطاء ميوت كتابى]
- [+UnMute !! لفك الميوت الكتابى]
- [+clear !! لمسح الشات]
+ [shbc !! لارسال رسالة للجميع فى وقت واحد]
+ [shban !! لتبنيد المخربين]
+ [shunban !! لفك الباند]
+ [shkick !! لاخراج الخارجين عن القوانين]
+ [shMute !! لاعطاء ميوت كتابى]
+ [shUnMute !! لفك الميوت الكتابى]
+ [shclear !! لمسح الشات]
 `);
        }
 });	   
 client.on("message", message => {
-var prefix = "+";
+var prefix = "sh";
             if (message.content.startsWith(prefix + "bc")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
@@ -497,7 +497,7 @@ client.on('message', message =>{
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
-    let prefix = '+';
+    let prefix = 'sh';
      
     if(cmd === `${prefix}ابلاغ`){
         let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -526,4 +526,4 @@ client.on('message', message =>{
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","member"));
     });
-client.login();
+client.login(process.env.BOT_TOKEN);
